@@ -3,14 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
+import Button from "@/components/Button";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/menu", label: "Menu" },
   { href: "/about", label: "About" },
-  { href: "/reservation", label: "Book Table" },
   { href: "/contact", label: "Contact" },
-  { href: "/bonita", label: "Bonita" },
+  { href: "/bonita", label: "Bonita Café" },
 ];
 
 export default function Navbar() {
@@ -48,28 +49,24 @@ export default function Navbar() {
 
         {/* Right - Book Table + Social */}
         <div className="flex-1 flex justify-end items-center gap-4">
-          <Link
-            href="/reservation"
-            className="text-white border border-white px-3 py-1 text-sm"
-          >
-            Book Table
-          </Link>
-          <a
+        <Button href="/reservation" label="Book Table" />
+        <a
             href="https://instagram.com/delacasa_pastabar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-sm"
-          >
-            IG
-          </a>
-          <a
+            className="text-3xl"
+            style={{ color: "white" }}
+        >
+            <FaInstagram />
+        </a>
+        <a
             href="https://www.facebook.com/delacasaioslo/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-sm"
-          >
-            FB
-          </a>
+            className="text-white text-2xl"
+        >
+            <FaFacebook />
+        </a>
         </div>
       </nav>
 
@@ -107,8 +104,14 @@ export default function Navbar() {
                 </Link>
               ))}
             </nav>
+            <div className="mt-auto">
+            <Button
+              href="/reservation"
+              label="Book Table"
+              onClick={() => setOpen(false)}
+            />
+            </div>
           </div>
-
           {/* Dimmed backdrop */}
           <div className="flex-1 bg-black/50" />
         </div>
