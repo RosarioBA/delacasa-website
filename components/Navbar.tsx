@@ -1,0 +1,118 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/menu", label: "Menu" },
+  { href: "/about", label: "About" },
+  { href: "/reservation", label: "Book Table" },
+  { href: "/contact", label: "Contact" },
+  { href: "/bonita", label: "Bonita" },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <nav
+        style={{ backgroundColor: "#000000" }}
+        className="flex items-center px-6 py-4 w-full"
+      >
+        {/* Left - Hamburger */}
+        <div className="flex-1">
+          <button
+            onClick={() => setOpen(true)}
+            className="text-white text-2xl"
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        {/* Center - Logo */}
+        <div className="flex-none">
+          <Link href="/">
+            <Image
+              src="/logo.jpg"
+              alt="De La Casa logo"
+              width={120}
+              height={120}
+              className="block object-contain"
+            />
+          </Link>
+        </div>
+
+        {/* Right - Book Table + Social */}
+        <div className="flex-1 flex justify-end items-center gap-4">
+          <Link
+            href="/reservation"
+            className="text-white border border-white px-3 py-1 text-sm"
+          >
+            Book Table
+          </Link>
+          <a
+            href="https://instagram.com/delacasa_pastabar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-sm"
+          >
+            IG
+          </a>
+          <a
+            href="https://www.facebook.com/delacasaioslo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-sm"
+          >
+            FB
+          </a>
+        </div>
+      </nav>
+
+      {/* Drawer overlay */}
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex"
+          onClick={() => setOpen(false)}
+        >
+          {/* Menu panel */}
+          <div
+            style={{ backgroundColor: "#000000" }}
+            className="w-72 h-full flex flex-col px-8 py-10 gap-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setOpen(false)}
+              className="text-white text-2xl self-end"
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+
+            {/* Nav links */}
+            <nav className="flex flex-col gap-6">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-white text-xl tracking-wide"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Dimmed backdrop */}
+          <div className="flex-1 bg-black/50" />
+        </div>
+      )}
+    </>
+  );
+}
