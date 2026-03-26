@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
@@ -16,12 +16,20 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       <nav
-        style={{ backgroundColor: "#000000" }}
-        className="flex items-center px-6 py-4 w-full"
+        className={`fixed top-0 left-0 w-full z-40 flex items-center px-6 py-4 transition-colors duration-300 ${
+          scrolled ? "bg-black" : "bg-transparent"
+        }`}
       >
         {/* Left - Hamburger */}
         <div className="flex-1">
