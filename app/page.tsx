@@ -1,7 +1,15 @@
+import Hero from "@/components/Hero";
+import Welcome from "@/components/Welcome";
+import LatestNews from "@/components/LatestNews";
+import BonitaPromo from "@/components/BonitaPromo";
+
 export default function Home() {
   return (
-    <main>
-      <h1>De La Casa</h1>
+    <main className="flex flex-col">
+      <Hero />
+      <Welcome />
+      <LatestNews />
+      <BonitaPromo />
     </main>
   );
 }

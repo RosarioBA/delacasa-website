@@ -9,8 +9,8 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: "bg-white text-black text-sm font-bold px-5 py-2 rounded-md",
-  secondary: "bg-white text-black px-6 py-3 text-sm font-medium",
+  primary: "bg-[#A06811] text-white text-sm font-bold px-5 py-2 rounded-md",
+  secondary: "bg-white text-[#A06811] text-sm font-bold px-5 py-2 rounded-md border border-[#A06811]",
 };
 
 export default function Button({
