@@ -21,3 +21,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes flicker {
+  0%   { filter: brightness(0.75); }
+  25%  { filter: brightness(0.9);  }
+  50%  { filter: brightness(0.7);  }
+  75%  { filter: brightness(0.85); }
+  100% { filter: brightness(0.75); }
+}
+
+.hero-flicker {
+  animation: flicker 6s ease-in-out infinite;
+}
