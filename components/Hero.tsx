@@ -45,8 +45,8 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col gap-1 text-sm text-gray-400 mt-2">
-            <span>+47 000 00 000</span>
-            <span>Frognerveien, Oslo</span>
+            <span>+47 928 33 275</span>
+            <span>Frognerveien 35A, 0266 Oslo</span>
           </div>
         </div>
 
