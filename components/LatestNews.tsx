@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const cards = [
   {
     id: 1,
@@ -30,8 +32,9 @@ export default function LatestNews() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {cards.map((card) => (
-          <div key={card.id} className="flex flex-col gap-4">
+        {cards.map((card, i) => (
+          <FadeIn key={card.id} delay={i * 0.15}>
+          <div className="flex flex-col gap-4">
             {/* Image placeholder */}
             <div className="w-full aspect-video bg-gray-200 rounded-xl flex items-center justify-center text-gray-400 text-sm">
               Image
@@ -43,6 +46,7 @@ export default function LatestNews() {
             <h3 className="text-xl font-bold text-black">{card.title}</h3>
             <p className="text-gray-600 text-sm leading-relaxed">{card.description}</p>
           </div>
+          </FadeIn>
         ))}
       </div>
     </section>
