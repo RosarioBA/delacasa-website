@@ -77,8 +77,7 @@ export default function Navbar() {
             href="https://instagram.com/delacasa_pastabar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl"
-            style={{ color: "white" }}
+            className="text-white text-3xl"
         >
             <FaInstagram />
         </a>
@@ -106,8 +105,7 @@ export default function Navbar() {
           >
             {/* Menu panel */}
             <motion.div
-              style={{ backgroundColor: "#000000" }}
-              className="w-72 h-full flex flex-col px-8 py-10 gap-8"
+              className="w-72 h-full flex flex-col px-8 py-10 gap-8 bg-black"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}

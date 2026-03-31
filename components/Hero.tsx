@@ -3,7 +3,6 @@ import Button from "@/components/Button";
 export default function Hero() {
   return (
     <section
-      className=""
       style={{
         backgroundImage: "url('/lights.jpg')",
         backgroundSize: "cover",
