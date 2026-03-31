@@ -8,15 +8,9 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <Hero />
-      <FadeIn>
-        <Welcome />
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <LatestNews />
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <BonitaPromo />
-      </FadeIn>
+      <Welcome />
+      <LatestNews />
+      <BonitaPromo />
     </main>
   );
 }
