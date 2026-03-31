@@ -1,48 +1,58 @@
-import Image from "next/image";
 import Button from "@/components/Button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background image */}
-      <Image
-        src="/lights.jpg"
-        alt="De La Casa atmosphere"
-        fill
-        className="object-cover hero-flicker"
-        priority
-      />
-
+    <section
+      className=""
+      style={{
+        backgroundImage: "url('/lights.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        paddingTop: "10rem",
+      }}
+    >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.4)" }} />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col gap-6 px-8 max-w-xl">
-        <div>
-          <div className="flex items-center gap-3 mb-2">
-            <span className="block w-8 h-px bg-[#A06811]" />
-            <p className="text-sm font-semibold tracking-widest uppercase text-[#A06811]">
-              Pasta Bar
-            </p>
+      <div style={{ position: "relative", zIndex: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", width: "100%", padding: "0 3rem", gap: "3rem" }}>
+        {/* Left — Text */}
+        <div className="flex flex-col gap-6 max-w-lg">
+          <div>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="block w-8 h-px bg-[#A06811]" />
+              <p className="text-sm font-semibold tracking-widest uppercase text-[#A06811]">
+                Pasta Bar
+              </p>
+            </div>
+            <h1 className="text-6xl font-bold tracking-tight text-white">
+              DE LA CASA
+            </h1>
           </div>
-          <h1 className="text-6xl font-bold tracking-tight text-white">
-            DE LA CASA
-          </h1>
+
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Make your own perfect pasta. Choose your favorite pasta, sauce and
+            toppings – made for you in minutes.
+          </p>
+
+          <div className="flex flex-row gap-4">
+            <Button href="/reservation" label="Book Table" />
+            <Button href="/menu" label="See Menu" variant="secondary" />
+          </div>
+
+          <div className="flex flex-col gap-1 text-sm text-gray-400 mt-2">
+            <span>+47 000 00 000</span>
+            <span>Frognerveien, Oslo</span>
+          </div>
         </div>
 
-        <p className="text-gray-300 text-lg leading-relaxed">
-          Make your own perfect pasta. Choose your favorite pasta, sauce and
-          toppings – made for you in minutes.
-        </p>
-
-        <div className="flex flex-row gap-4">
-          <Button href="/reservation" label="Book Table" />
-          <Button href="/menu" label="See Menu" variant="secondary" />
-        </div>
-
-        <div className="flex flex-col gap-1 text-sm text-gray-400 mt-2">
-          <span>+47 000 00 000</span>
-          <span>Frognerveien, Oslo</span>
+        {/* Right — Image placeholder */}
+        <div style={{ width: "40%", aspectRatio: "1", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1rem", display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.4)", fontSize: "0.875rem" }}>
+          Pasta image
         </div>
       </div>
     </section>
