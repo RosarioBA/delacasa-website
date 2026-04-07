@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# De La Casa — Pastabar & Café Oslo
+
+Website for [De La Casa](https://www.delacasapastabar.com), an Italian pasta bar and café located in Frognerveien, Oslo.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **CMS:** Sanity v4
+- **Icons:** React Icons
+- **Fonts:** Geist (sans/mono), Playfair Display (menu page)
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Sanity Studio is available at [http://localhost:3000/studio](http://localhost:3000/studio).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+app/
+  page.tsx              # Homepage
+  menu/page.tsx         # Menu page
+  about/page.tsx        # About page
+  contact/page.tsx      # Contact page
+  reservation/page.tsx  # Reservation page
+  bonita/page.tsx       # Bonita Café page
+  studio/               # Sanity Studio (embedded)
+  layout.tsx            # Root layout (Navbar + Footer)
+  globals.css           # Global styles + brand color tokens
 
-To learn more about Next.js, take a look at the following resources:
+components/
+  Navbar.tsx            # Fixed navbar, transparent → black on scroll, animated hamburger
+  Footer.tsx            # Three-column footer
+  Hero.tsx              # Homepage hero with full-screen background
+  Welcome.tsx           # Welcome section
+  LatestNews.tsx        # News & dishes cards
+  BonitaPromo.tsx       # Bonita Café promo split section
+  Button.tsx            # Reusable button (primary/secondary variants)
+  FadeIn.tsx            # Scroll-triggered fade in animation wrapper
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+sanity/
+  schemaTypes/          # Sanity content schemas
+  lib/                  # Sanity client, image helpers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+public/
+  logo.jpg              # De La Casa logo
+  lights.jpg            # Hero background image
+```
 
-## Deploy on Vercel
+## Brand Colors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--color-black` | `#010101` | Backgrounds (dark sections) |
+| `--color-brown-dark` | `#6C270E` | Headings, accents (light backgrounds) |
+| `--color-brown-mid` | `#8A4F2A` | — |
+| `--color-brown-light` | `#A06811` | Headings, accents (dark backgrounds) |
+| `--color-cream` | `#FFEACD` | Section backgrounds |
+| `--color-white` | `#ffffff` | Text, buttons |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Pages Status
+
+| Page | Status |
+|------|--------|
+| Homepage | Done |
+| Menu | Done |
+| About | To do |
+| Contact | To do |
+| Reservation | To do |
+| Bonita Café | To do |
