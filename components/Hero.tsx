@@ -4,6 +4,7 @@ export default function Hero() {
   return (
     <section
       style={{
+        backgroundColor: "#000",
         backgroundImage: "url('/lights.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
