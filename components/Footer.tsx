@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3 text-sm text-gray-400">
             <div>
               <p className="text-white font-medium">De La Casa Pasta Bar</p>
-              <p>Frognerveien, Oslo</p>
+              <p>Frognerveien 35A, 0266 Oslo</p>
             </div>
             <div>
               <p className="text-white font-medium">Bonita Café</p>

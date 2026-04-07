@@ -37,16 +37,14 @@ const sections = [
     title: "De La Casa Brunch",
     imageLeft: true,
     content: (
-      <>
-        <p className="text-[#010101] text-lg leading-relaxed">
-          By popular demand we now offer a fantastic Brunch menu, full of fresh
-          and tasty options to enjoy after a beautiful stroll in the nearby
-          Vigeland park in Oslo. Pair your favourite dish with one of our
-          vitamin boosting, home made smoothies or a cup of premium colombian
-          coffee, and you'll be so satisfied that the traditional Sunday brunch
-          will convert to your regular breakfast or lunch all week!
-        </p>
-      </>
+      <p className="text-[#010101] text-lg leading-relaxed">
+        By popular demand we now offer a fantastic Brunch menu, full of fresh
+        and tasty options to enjoy after a beautiful stroll in the nearby
+        Vigeland park in Oslo. Pair your favourite dish with one of our
+        vitamin boosting, home made smoothies or a cup of premium colombian
+        coffee, and you'll be so satisfied that the traditional Sunday brunch
+        will convert to your regular breakfast or lunch all week!
+      </p>
     ),
   },
   {
