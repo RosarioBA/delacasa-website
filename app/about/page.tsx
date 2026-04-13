@@ -38,7 +38,7 @@ function BrickPattern() {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pb-20" style={{ backgroundColor: "#FFEACD" }}>
+    <main className="min-h-screen pb-20" style={{ backgroundColor: "#DBD2C3" }}>
       {/* Header */}
       <div
         className="flex flex-col items-center gap-6 px-8 pb-16"

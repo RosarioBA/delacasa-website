@@ -7,7 +7,7 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function BonitaPage() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "#FFEACD" }}>
+    <main className="min-h-screen" style={{ backgroundColor: "#DBD2C3" }}>
 
       {/* Section 1 — Hero intro */}
       <section
@@ -83,7 +83,7 @@ export default function BonitaPage() {
       {/* Section 2 — Full menu */}
       <section
         className="flex flex-col items-center gap-8 px-16 py-20"
-        style={{ backgroundColor: "#F5E6CC" }}
+        style={{ backgroundColor: "#CEC5B6" }}
       >
         <FadeIn className="flex flex-col items-center gap-3 text-center">
           <h2
@@ -119,7 +119,7 @@ export default function BonitaPage() {
       {/* Section 3 — Order Takeaway */}
       <section
         className="relative flex flex-col items-center justify-center gap-8 px-16 py-24 overflow-hidden"
-        style={{ backgroundColor: "#FFEACD" }}
+        style={{ backgroundColor: "#DBD2C3" }}
       >
         {/* Wheat/grain SVG decorations */}
         <svg
