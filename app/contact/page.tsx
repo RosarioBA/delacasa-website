@@ -79,7 +79,7 @@ const faqs = [
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "#FFEACD" }}>
+    <main className="min-h-screen" style={{ backgroundColor: "#DBD2C3" }}>
       {/* Header */}
       <div
         className="flex flex-col items-center gap-6 px-8 pb-16"
@@ -174,7 +174,7 @@ export default function ContactPage() {
       <section style={{ backgroundColor: "#A06811" }} className="px-16 py-20">
         <FadeIn>
           <h2
-            className={`${playfair.className} text-4xl font-bold text-[#FFEACD] text-center mb-12`}
+            className={`${playfair.className} text-4xl font-bold text-[#DBD2C3] text-center mb-12`}
           >
             Frequently Asked Questions
           </h2>
@@ -187,10 +187,10 @@ export default function ContactPage() {
                 className="rounded-xl p-6 flex flex-col gap-3"
                 style={{ backgroundColor: "#8A4F2A" }}
               >
-                <p className="text-[#FFEACD] font-bold text-base leading-snug">
+                <p className="text-[#DBD2C3] font-bold text-base leading-snug">
                   {faq.question}
                 </p>
-                <p className="text-[#FFEACD]/80 text-sm leading-relaxed">
+                <p className="text-[#DBD2C3]/80 text-sm leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
