@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "De La Casa | Pastabar & Café Oslo",
-  description: "De La Casa er en pastabar og café i Oslo som tilbyr autentiske italienske retter laget med kjærlighet og ferske ingredienser. Velkommen til en smakfull opplevelse!",
+  title: "De La Casa | Pasta Bar Oslo",
+  description: "Build your own perfect pasta at De La Casa in Frogner, Oslo. Choose your pasta, sauce and toppings – freshly made for you in minutes. Book a table today.",
 };
 
 export default function RootLayout({
