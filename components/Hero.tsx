@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
 
         {/* Right — Image */}
-        <div style={{ position: "relative", width: "40%", aspectRatio: "1", borderRadius: "1rem", overflow: "hidden" }}>
+        <div style={{ position: "relative", width: "28%", aspectRatio: "1", borderRadius: "1rem", overflow: "hidden" }}>
           <Image src="/burmesehero.jpg" alt="De La Casa restaurant" fill className="object-cover" />
         </div>
       </div>
