@@ -42,7 +42,7 @@ export default function AboutPage() {
       {/* Header */}
       <div
         className="flex flex-col items-center gap-6 px-8 pb-16"
-        style={{ paddingTop: "10rem" }}
+        style={{ paddingTop: "12rem" }}
       >
         <div className="flex items-center gap-8">
           <BrickPattern />
