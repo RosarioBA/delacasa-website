@@ -70,7 +70,7 @@ export default function Navbar() {
               alt="De La Casa logo"
               width={120}
               height={120}
-              className="block object-contain"
+              className="block object-contain rounded-xl"
             />
           </Link>
         </div>
