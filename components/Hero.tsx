@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/Button";
 
 export default function Hero() {
@@ -50,9 +51,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — Image placeholder */}
-        <div style={{ width: "40%", aspectRatio: "1", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1rem", display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.4)", fontSize: "0.875rem" }}>
-          Pasta image
+        {/* Right — Image */}
+        <div style={{ position: "relative", width: "40%", aspectRatio: "1", borderRadius: "1rem", overflow: "hidden" }}>
+          <Image src="/burmesehero.jpg" alt="De La Casa restaurant" fill className="object-cover" />
         </div>
       </div>
     </section>

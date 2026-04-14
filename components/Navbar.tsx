@@ -21,6 +21,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
+  const useDark = !scrolled && !isHome;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -43,17 +45,17 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <motion.span
-              className="block h-[2px] bg-white rounded"
+              className={`block h-[3px] rounded transition-colors duration-300 ${useDark ? "bg-black" : "bg-white"}`}
               animate={open ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className="block h-[2px] bg-white rounded"
+              className={`block h-[3px] rounded transition-colors duration-300 ${useDark ? "bg-black" : "bg-white"}`}
               animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
               transition={{ duration: 0.2 }}
             />
             <motion.span
-              className="block h-[2px] bg-white rounded"
+              className={`block h-[3px] rounded transition-colors duration-300 ${useDark ? "bg-black" : "bg-white"}`}
               animate={open ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.3 }}
             />
@@ -80,7 +82,7 @@ export default function Navbar() {
             href="https://instagram.com/delacasa_pastabar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-3xl"
+            className={`text-3xl transition-colors duration-300 ${useDark ? "text-black" : "text-white"}`}
           >
             <FaInstagram />
           </a>
@@ -88,7 +90,7 @@ export default function Navbar() {
             href="https://www.facebook.com/delacasaioslo/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-2xl"
+            className={`text-2xl transition-colors duration-300 ${useDark ? "text-black" : "text-white"}`}
           >
             <FaFacebook />
           </a>
