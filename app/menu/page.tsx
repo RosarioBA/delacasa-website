@@ -67,7 +67,7 @@ export default function MenuPage() {
       {/* Header */}
       <div
         className="flex flex-col items-center gap-4 px-8 pb-16"
-        style={{ paddingTop: "10rem" }}
+        style={{ paddingTop: "12rem" }}
       >
         <div className="flex items-center gap-6">
           <GiKnifeFork className="text-[#6C270E] text-4xl -rotate-12" />
