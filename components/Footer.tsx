@@ -29,6 +29,16 @@ export default function Footer() {
                 Bonita Café
               </Link>
             </li>
+            <li>
+              <a
+                href="https://givn.no/en/shop/delacasa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Gift Cards
+              </a>
+            </li>
           </ul>
         </div>
 

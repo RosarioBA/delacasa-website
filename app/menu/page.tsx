@@ -63,11 +63,11 @@ const sections = [
 
 export default function MenuPage() {
   return (
-    <main className="min-h-screen pb-20" style={{ backgroundColor: "#FFEACD" }}>
+    <main className="min-h-screen pb-20" style={{ backgroundColor: "#DBD2C3" }}>
       {/* Header */}
       <div
         className="flex flex-col items-center gap-4 px-8 pb-16"
-        style={{ paddingTop: "10rem" }}
+        style={{ paddingTop: "12rem" }}
       >
         <div className="flex items-center gap-6">
           <GiKnifeFork className="text-[#6C270E] text-4xl -rotate-12" />
@@ -87,7 +87,7 @@ export default function MenuPage() {
           <span className="block w-16 h-px bg-[#6C270E]" />
         </div>
 
-        <Button href="/BH-2026-03-13_DLC_Menu_pasta_brunch.pdf" label="View Menu" />
+        <Button href="https://www.delacasapastabar.com/_files/ugd/430aec_4fe63c2d79264965a4e57cdf6a42fdcd.pdf" label="View Menu" external />
       </div>
 
       {/* Sections */}

@@ -6,6 +6,7 @@ interface ButtonProps {
   variant?: "primary" | "secondary";
   onClick?: () => void;
   fullWidth?: boolean;
+  external?: boolean;
 }
 
 const variants = {
@@ -19,10 +20,18 @@ export default function Button({
   variant = "primary",
   onClick,
   fullWidth = false,
+  external = false,
 }: ButtonProps) {
   const className = [variants[variant], fullWidth ? "block w-full text-center" : "inline-block"].join(" ");
 
   if (href) {
+    if (external) {
+      return (
+        <a href={href} onClick={onClick} className={className} target="_blank" rel="noopener noreferrer">
+          {label}
+        </a>
+      );
+    }
     return (
       <Link href={href} onClick={onClick} className={className}>
         {label}
