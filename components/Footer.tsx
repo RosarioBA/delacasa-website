@@ -30,7 +30,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <a href="https://givn.no/en/shop/delacasa" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              <a
+                href="https://givn.no/en/shop/delacasa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
                 Gift Cards
               </a>
             </li>

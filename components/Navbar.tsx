@@ -75,23 +75,23 @@ export default function Navbar() {
 
         {/* Right - Book Table + Social */}
         <div className="flex-1 flex justify-end items-center gap-4">
-        <Button href="/reservation" label="Book Table" />
-        <a
+          <Button href="/reservation" label="Book Table" />
+          <a
             href="https://instagram.com/delacasa_pastabar/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-3xl"
-        >
+          >
             <FaInstagram />
-        </a>
-        <a
+          </a>
+          <a
             href="https://www.facebook.com/delacasaioslo/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl"
-        >
+          >
             <FaFacebook />
-        </a>
+          </a>
         </div>
       </nav>
 
