@@ -12,17 +12,15 @@ export const metadata: Metadata = {
 export default function ReservationPage() {
   return (
     <main
-      className="min-h-screen flex items-center justify-center px-6 py-24"
+      className="min-h-screen flex items-center justify-center px-6 py-24 pt-40"
       style={{
-        backgroundColor: "#010101",
+        backgroundColor: "#DBD2C3",
         backgroundImage: "url('/restaurant-interior.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
       }}
     >
-      {/* Dark overlay */}
-      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.6)" }} />
 
       {/* Card */}
       <div
