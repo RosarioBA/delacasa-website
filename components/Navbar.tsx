@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
@@ -13,11 +14,13 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/bonita", label: "Bonita Café" },
+  { href: "https://givn.no/en/shop/delacasa", label: "Gift Cards", external: true },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -72,23 +75,23 @@ export default function Navbar() {
 
         {/* Right - Book Table + Social */}
         <div className="flex-1 flex justify-end items-center gap-4">
-        <Button href="/reservation" label="Book Table" />
-        <a
+          <Button href="/reservation" label="Book Table" />
+          <a
             href="https://instagram.com/delacasa_pastabar/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-3xl"
-        >
+          >
             <FaInstagram />
-        </a>
-        <a
+          </a>
+          <a
             href="https://www.facebook.com/delacasaioslo/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl"
-        >
+          >
             <FaFacebook />
-        </a>
+          </a>
         </div>
       </nav>
 
@@ -123,16 +126,29 @@ export default function Navbar() {
 
               {/* Nav links */}
               <nav className="flex flex-col gap-6">
-                {links.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="text-white text-xl tracking-wide"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {links.map((link) =>
+                  link.external ? (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setOpen(false)}
+                      className="text-white text-xl tracking-wide uppercase transition-all duration-200 hover:italic hover:font-bold hover:pl-2"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className={`text-white text-xl tracking-wide uppercase transition-all duration-200 hover:italic hover:font-bold hover:pl-2 ${pathname === link.href ? "underline underline-offset-4" : ""}`}
+                    >
+                      {link.label}
+                    </Link>
+                  )
+                )}
               </nav>
               <div className="mt-auto">
                 <Button
