@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import { FaArrowRight } from "react-icons/fa";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
+
+export const metadata: Metadata = {
+  title: "Bonita Café | De La Casa",
+  description: "Visit Bonita Café in Briskeby, Oslo. Colombian coffee, grilled sandwiches and more.",
+};
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 

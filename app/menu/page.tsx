@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import { GiKnifeFork } from "react-icons/gi";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
+
+export const metadata: Metadata = {
+  title: "Menu | De La Casa",
+  description: "Explore our pasta bar menu and brunch options at De La Casa, Frognerveien 35A Oslo.",
+};
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
