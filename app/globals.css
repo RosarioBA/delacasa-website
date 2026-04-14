@@ -9,12 +9,18 @@
   --color-white: #ffffff;
 }
 
-@theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 body {
   font-family: var(--font-geist-sans), Arial, sans-serif;
+  color: #1C0A04;
+}
+
+p {
+  font-family: var(--font-crimson), Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+button {
+  font-family: var(--font-crimson), Georgia, serif;
 }
 
