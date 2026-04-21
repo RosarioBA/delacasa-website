@@ -45,41 +45,41 @@ function BrickPattern() {
 
 const faqs = [
   {
+    question: "Is De La Casa a café or a restaurant?",
+    answer:
+      "De La Casa is a pasta bar restaurant! We serve freshly made pasta, brunch, and more. If you're looking for a cosy café experience, check out our sister spot Bonita Café — it's small, relaxed, and perfect for a coffee and a treat.",
+  },
+  {
+    question: "Do I need a reservation?",
+    answer:
+      "We recommend booking in advance, especially on weekends. You can reserve a table online or by calling us on +47 928 33 275.",
+  },
+  {
+    question: "What is the cancellation policy?",
+    answer:
+      "A credit card is required to guarantee your reservation. If you cancel less than 24 hours before your visit or do not show up, a no-show fee of 200 NOK per person will be charged.",
+  },
+  {
+    question: "Can I book for a large group?",
+    answer:
+      "For groups of more than 8 people, please contact us directly by phone so we can make the best arrangements for you.",
+  },
+  {
+    question: "Does Bonita Café take reservations?",
+    answer:
+      "Bonita Café is a small, cosy spot — we don't take reservations there, just come in and enjoy! It's the perfect place for a great coffee and a bite.",
+  },
+  {
     question: "I can't find my receipt",
     answer: (
       <>
-        Try our{" "}
-        <a href="#" className="underline underline-offset-2">
+        Use our{" "}
+        <a href="https://receipts.bonitahandel.no/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
           receipt finder
         </a>
-        ! Contact us if you have issues.
+        {" "}to locate your receipt. Still having trouble? Drop us an email at info@delacasa.no.
       </>
     ),
-  },
-  {
-    question: "Do you offer same-day delivery?",
-    answer:
-      "Yes! Orders placed before 12pm are eligible for same-day delivery anywhere in Oslo. We deliver 7 days a week.",
-  },
-  {
-    question: "Can I customize my bouquet?",
-    answer:
-      "Absolutely! Contact us by phone or email to discuss your custom arrangement. Our florists are happy to create something unique for your special occasion.",
-  },
-  {
-    question: "What makes Colombian roses so special?",
-    answer:
-      "Combined with volcanic soil and cool mountain temperatures, creates roses with larger blooms (6-8cm), more vibrant colors, stronger stems (50-80cm), and exceptional vase life of 2-3 weeks—nearly double that of standard roses.",
-  },
-  {
-    question: "Can I schedule a delivery for a specific date?",
-    answer:
-      "Yes! When placing your order, you can select any future date for delivery. We recommend ordering at least 1 day in advance. For special occasions like Valentine's Day or Mother's Day, please order early.",
-  },
-  {
-    question: "What if the recipient isn't home?",
-    answer:
-      "Our delivery drivers will attempt to leave the flowers in a safe, shaded location if possible. They may leave with a neighbor or building reception. If delivery cannot be completed, we'll contact the recipient to arrange a new delivery time.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
             <div
-              className="flex items-center gap-4 px-8 py-5 rounded-xl"
+              className="flex items-center gap-4 px-8 py-5 rounded-xl w-full sm:flex-1"
               style={{ backgroundColor: "#E8D5B5" }}
             >
               <FaEnvelope className="text-[#6C270E] text-2xl flex-shrink-0" />
@@ -156,7 +156,7 @@ export default function ContactPage() {
             </div>
 
             <div
-              className="flex items-center gap-4 px-8 py-5 rounded-xl"
+              className="flex items-center gap-4 px-8 py-5 rounded-xl w-full sm:flex-1"
               style={{ backgroundColor: "#E8D5B5" }}
             >
               <FaPhone className="text-[#6C270E] text-2xl flex-shrink-0" />
