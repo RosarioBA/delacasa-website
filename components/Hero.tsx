@@ -36,7 +36,7 @@ export default function Hero() {
         </div>
 
         {/* Subtext */}
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md">
+        <p className="text-white text-base md:text-lg leading-relaxed max-w-md">
           Make your own perfect pasta. Choose your pasta, sauce and toppings –
           freshly made for you in minutes.
         </p>

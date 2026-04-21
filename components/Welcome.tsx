@@ -20,7 +20,7 @@ export default function Welcome() {
       </FadeIn>
 
       <FadeIn delay={0.2}>
-        <div className="text-gray-400 text-lg leading-relaxed max-w-2xl flex flex-col gap-4">
+        <div className="text-white text-lg leading-relaxed max-w-2xl flex flex-col gap-4">
           <p>
             Experience delicious pasta in the heart of Oslo. Our pasta bar brings
             Italian recipes with a modern twist, using fresh local ingredients and
