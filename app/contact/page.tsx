@@ -45,41 +45,41 @@ function BrickPattern() {
 
 const faqs = [
   {
+    question: "Is De La Casa a café or a restaurant?",
+    answer:
+      "De La Casa is a pasta bar restaurant! We serve freshly made pasta, brunch, and more. If you're looking for a cosy café experience, check out our sister spot Bonita Café — it's small, relaxed, and perfect for a coffee and a treat.",
+  },
+  {
+    question: "Do I need a reservation?",
+    answer:
+      "We recommend booking in advance, especially on weekends. You can reserve a table online or by calling us on +47 928 33 275.",
+  },
+  {
+    question: "What is the cancellation policy?",
+    answer:
+      "A credit card is required to guarantee your reservation. If you cancel less than 24 hours before your visit or do not show up, a no-show fee of 200 NOK per person will be charged.",
+  },
+  {
+    question: "Can I book for a large group?",
+    answer:
+      "For groups of more than 8 people, please contact us directly by phone so we can make the best arrangements for you.",
+  },
+  {
+    question: "Does Bonita Café take reservations?",
+    answer:
+      "Bonita Café is a small, cosy spot — we don't take reservations there, just come in and enjoy! It's the perfect place for a great coffee and a bite.",
+  },
+  {
     question: "I can't find my receipt",
     answer: (
       <>
-        Try our{" "}
-        <a href="#" className="underline underline-offset-2">
+        Use our{" "}
+        <a href="https://receipts.bonitahandel.no/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
           receipt finder
         </a>
-        ! Contact us if you have issues.
+        {" "}to locate your receipt. Still having trouble? Drop us an email at info@delacasa.no.
       </>
     ),
-  },
-  {
-    question: "Do you offer same-day delivery?",
-    answer:
-      "Yes! Orders placed before 12pm are eligible for same-day delivery anywhere in Oslo. We deliver 7 days a week.",
-  },
-  {
-    question: "Can I customize my bouquet?",
-    answer:
-      "Absolutely! Contact us by phone or email to discuss your custom arrangement. Our florists are happy to create something unique for your special occasion.",
-  },
-  {
-    question: "What makes Colombian roses so special?",
-    answer:
-      "Combined with volcanic soil and cool mountain temperatures, creates roses with larger blooms (6-8cm), more vibrant colors, stronger stems (50-80cm), and exceptional vase life of 2-3 weeks—nearly double that of standard roses.",
-  },
-  {
-    question: "Can I schedule a delivery for a specific date?",
-    answer:
-      "Yes! When placing your order, you can select any future date for delivery. We recommend ordering at least 1 day in advance. For special occasions like Valentine's Day or Mother's Day, please order early.",
-  },
-  {
-    question: "What if the recipient isn't home?",
-    answer:
-      "Our delivery drivers will attempt to leave the flowers in a safe, shaded location if possible. They may leave with a neighbor or building reception. If delivery cannot be completed, we'll contact the recipient to arrange a new delivery time.",
   },
 ];
 
@@ -87,14 +87,11 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "#DBD2C3" }}>
       {/* Header */}
-      <div
-        className="flex flex-col items-center gap-6 px-8 pb-16"
-        style={{ paddingTop: "12rem" }}
-      >
-        <div className="flex items-center gap-8">
+      <div className="flex flex-col items-center gap-6 px-8 pt-40 md:pt-48 pb-12 md:pb-16">
+        <div className="flex items-center gap-4 md:gap-8">
           <BrickPattern />
           <h1
-            className={`${playfair.className} text-5xl font-bold text-[#6C270E] tracking-wide`}
+            className={`${playfair.className} text-4xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center`}
           >
             Contact Us
           </h1>
@@ -106,7 +103,7 @@ export default function ContactPage() {
 
       {/* Section 1 — Map + Address */}
       <FadeIn>
-        <div className="px-16 pb-16 max-w-5xl mx-auto">
+        <div className="px-6 md:px-16 pb-16 max-w-5xl mx-auto w-full">
           <iframe
             src="https://maps.google.com/maps?q=Frognerveien+35A,+0264+Oslo,+Norway&output=embed"
             width="100%"
@@ -118,10 +115,10 @@ export default function ContactPage() {
           />
 
           <div
-            className="grid grid-cols-2 mt-0 rounded-b-xl overflow-hidden"
+            className="grid grid-cols-1 md:grid-cols-2 mt-0 rounded-b-xl overflow-hidden"
             style={{ backgroundColor: "#1a0a04" }}
           >
-            <div className="px-8 py-6 border-r border-white/10">
+            <div className="px-8 py-6 border-b md:border-b-0 md:border-r border-white/20">
               <p className="text-white font-bold text-lg mb-2">
                 De La Casa Frogner
               </p>
@@ -137,16 +134,16 @@ export default function ContactPage() {
 
       {/* Section 2 — Contact info */}
       <FadeIn>
-        <div className="flex flex-col items-center gap-8 px-16 pb-20">
+        <div className="flex flex-col items-center gap-8 px-6 md:px-16 pb-20">
           <h2
             className={`${playfair.className} text-3xl font-bold text-[#6C270E] text-center max-w-2xl`}
           >
             Do You Have Any Question Or Want To Book A Table? Contact Us!
           </h2>
 
-          <div className="flex gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
             <div
-              className="flex items-center gap-4 px-8 py-5 rounded-xl"
+              className="flex items-center gap-4 px-8 py-5 rounded-xl w-full sm:flex-1"
               style={{ backgroundColor: "#E8D5B5" }}
             >
               <FaEnvelope className="text-[#6C270E] text-2xl flex-shrink-0" />
@@ -159,7 +156,7 @@ export default function ContactPage() {
             </div>
 
             <div
-              className="flex items-center gap-4 px-8 py-5 rounded-xl"
+              className="flex items-center gap-4 px-8 py-5 rounded-xl w-full sm:flex-1"
               style={{ backgroundColor: "#E8D5B5" }}
             >
               <FaPhone className="text-[#6C270E] text-2xl flex-shrink-0" />
@@ -172,21 +169,21 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <Button href="/reservation" label="Book Table" />
+          <div className="w-fit"><Button href="/reservation" label="Book Table" /></div>
         </div>
       </FadeIn>
 
       {/* Section 3 — FAQ */}
-      <section style={{ backgroundColor: "#A06811" }} className="px-16 py-20">
+      <section style={{ backgroundColor: "#A06811" }} className="px-6 md:px-16 py-14 md:py-20">
         <FadeIn>
           <h2
-            className={`${playfair.className} text-4xl font-bold text-[#DBD2C3] text-center mb-12`}
+            className={`${playfair.className} text-3xl md:text-4xl font-bold text-[#DBD2C3] text-center mb-10 md:mb-12`}
           >
             Frequently Asked Questions
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {faqs.map((faq, i) => (
             <FadeIn key={i} delay={i * 0.08}>
               <div
