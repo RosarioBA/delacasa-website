@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
+
+export const metadata: Metadata = {
+  title: "About Us | De La Casa",
+  description: "The story behind De La Casa pasta bar in Oslo, founded by the team behind Bonita Flowers and Bonita Café.",
+};
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 

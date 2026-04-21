@@ -1,4 +1,7 @@
+import { Playfair_Display } from "next/font/google";
 import Button from "@/components/Button";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function Hero() {
   return (
@@ -12,48 +15,45 @@ export default function Hero() {
         position: "relative",
         display: "flex",
         alignItems: "center",
-        paddingTop: "10rem",
       }}
     >
       {/* Dark overlay */}
-      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.4)" }} />
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.55)" }} />
 
       {/* Content */}
-      <div style={{ position: "relative", zIndex: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", width: "100%", padding: "0 3rem", gap: "3rem" }}>
-        {/* Left — Text */}
-        <div className="flex flex-col gap-6 max-w-lg">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <span className="block w-8 h-px bg-[#A06811]" />
-              <p className="text-sm font-semibold tracking-widest uppercase text-[#A06811]">
-                Pasta Bar
-              </p>
-            </div>
-            <h1 className="text-6xl font-bold tracking-tight text-white">
-              DE LA CASA
-            </h1>
-          </div>
+      <div className="relative z-10 flex flex-col gap-6 px-16 max-w-2xl" style={{ paddingTop: "6rem" }}>
 
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Make your own perfect pasta. Choose your favorite pasta, sauce and
-            toppings – made for you in minutes.
+        {/* Heading */}
+        <h1 className={`${playfair.className} text-8xl font-bold italic text-white leading-tight`}>
+          De La Casa
+        </h1>
+
+        <div className="flex items-center gap-3">
+          <span className="block w-8 h-px bg-[#A06811]" />
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#A06811]">
+            Pasta Bar · Oslo
           </p>
-
-          <div className="flex flex-row gap-4">
-            <Button href="/reservation" label="Book Table" />
-            <Button href="/menu" label="See Menu" variant="secondary" />
-          </div>
-
-          <div className="flex flex-col gap-1 text-sm text-gray-400 mt-2">
-            <span>+47 928 33 275</span>
-            <span>Frognerveien 35A, 0266 Oslo</span>
-          </div>
         </div>
 
-        {/* Right — Image placeholder */}
-        <div style={{ width: "40%", aspectRatio: "1", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "1rem", display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.4)", fontSize: "0.875rem" }}>
-          Pasta image
+        {/* Subtext */}
+        <p className="text-gray-300 text-lg leading-relaxed max-w-md">
+          Make your own perfect pasta. Choose your pasta, sauce and toppings –
+          freshly made for you in minutes.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-row gap-4">
+          <Button href="/reservation" label="Book Table" />
+          <Button href="/menu" label="See Menu" variant="secondary" />
         </div>
+
+        {/* Info */}
+        <div className="flex items-center gap-4 text-sm text-gray-400">
+          <span>+47 928 33 275</span>
+          <span className="text-gray-600">·</span>
+          <span>Frognerveien 35A, 0266 Oslo</span>
+        </div>
+
       </div>
     </section>
   );

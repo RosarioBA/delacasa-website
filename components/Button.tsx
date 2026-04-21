@@ -3,15 +3,17 @@ import Link from "next/link";
 interface ButtonProps {
   label: string;
   href?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "dark" | "white";
   onClick?: () => void;
   fullWidth?: boolean;
   external?: boolean;
 }
 
 const variants = {
-  primary: "bg-[#A06811] text-white text-sm font-bold px-5 py-2 rounded-md",
-  secondary: "bg-white text-[#A06811] text-sm font-bold px-5 py-2 rounded-md border border-[#A06811]",
+  primary: "bg-[#6C270E] text-white text-sm font-bold px-8 py-3 rounded-md transition-all duration-200 hover:bg-[#A06811] hover:italic",
+  secondary: "bg-white text-[#6C270E] text-sm font-bold px-8 py-3 rounded-md border border-[#6C270E] transition-all duration-200 hover:bg-[#6C270E] hover:text-white hover:italic",
+  dark: "bg-[#010101] text-white text-sm font-bold px-5 py-2 rounded-md",
+  white: "bg-white text-black text-sm font-bold px-5 py-2 rounded-md",
 };
 
 export default function Button({

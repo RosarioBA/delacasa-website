@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Crimson_Text } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,14 +9,15 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const crimsonText = Crimson_Text({
+  variable: "--font-crimson",
   subsets: ["latin"],
+  weight: ["400", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "De La Casa | Pastabar & Café Oslo",
-  description: "De La Casa er en pastabar og café i Oslo som tilbyr autentiske italienske retter laget med kjærlighet og ferske ingredienser. Velkommen til en smakfull opplevelse!",
+  title: "De La Casa | Pasta Bar Oslo",
+  description: "Build your own perfect pasta at De La Casa in Frogner, Oslo. Choose your pasta, sauce and toppings – freshly made for you in minutes. Book a table today.",
 };
 
 export default function RootLayout({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${crimsonText.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
