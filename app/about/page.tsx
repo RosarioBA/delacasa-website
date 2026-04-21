@@ -46,14 +46,11 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen pb-20" style={{ backgroundColor: "#DBD2C3" }}>
       {/* Header */}
-      <div
-        className="flex flex-col items-center gap-6 px-8 pb-16"
-        style={{ paddingTop: "12rem" }}
-      >
-        <div className="flex items-center gap-8">
+      <div className="flex flex-col items-center gap-6 px-8 pt-40 md:pt-48 pb-12 md:pb-16">
+        <div className="flex items-center gap-4 md:gap-8">
           <BrickPattern />
           <h1
-            className={`${playfair.className} text-5xl font-bold text-[#6C270E] tracking-wide`}
+            className={`${playfair.className} text-4xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center`}
           >
             About Us
           </h1>
@@ -64,10 +61,10 @@ export default function AboutPage() {
       </div>
 
       {/* Main content */}
-      <div className="flex flex-row items-start gap-16 px-16 max-w-6xl mx-auto">
+      <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16 px-6 md:px-16 max-w-6xl mx-auto">
         {/* Text */}
-        <FadeIn className="flex-1 flex flex-col gap-6">
-          <p className="text-[#010101] text-lg leading-relaxed">
+        <FadeIn className="w-full md:flex-1 flex flex-col gap-6">
+          <p className="text-[#010101] text-base md:text-lg leading-relaxed">
             De La Casa was created by the founders of{" "}
             <Link href="/bonita" className="text-[#6C270E] font-semibold underline underline-offset-2">
               Bonita Flowers
@@ -81,14 +78,14 @@ export default function AboutPage() {
             some of the worlds best, Colombian coffee served with delicious home
             made treats.
           </p>
-          <p className="text-[#010101] text-lg leading-relaxed">
+          <p className="text-[#010101] text-base md:text-lg leading-relaxed">
             2018 has brought upon change and new challenges which have
             translated into the new "De La Casa" concept. The literal meaning is
             "from home" and the idea was to create a cosy space, where people
             can feel welcome and enjoy a delicious, unpretentious meal, as
             though made in their own home.
           </p>
-          <p className="text-[#010101] text-lg leading-relaxed">
+          <p className="text-[#010101] text-base md:text-lg leading-relaxed">
             The Pasta bar is a simple solution where you can create your own
             favourite combination, selecting your pasta, base sauce and toppings
             of choice, which will be prepared freshly for you within minutes.
@@ -96,7 +93,7 @@ export default function AboutPage() {
         </FadeIn>
 
         {/* Image placeholder */}
-        <div className="flex-shrink-0" style={{ width: "35%" }}>
+        <div className="w-full md:flex-shrink-0 md:w-[35%] order-first md:order-last">
           <FadeIn delay={0.15}>
             <div
               className="bg-gray-300 rounded-xl w-full"
