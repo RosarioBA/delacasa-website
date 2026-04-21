@@ -87,14 +87,11 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "#DBD2C3" }}>
       {/* Header */}
-      <div
-        className="flex flex-col items-center gap-6 px-8 pb-16"
-        style={{ paddingTop: "12rem" }}
-      >
-        <div className="flex items-center gap-8">
+      <div className="flex flex-col items-center gap-6 px-8 pt-40 md:pt-48 pb-12 md:pb-16">
+        <div className="flex items-center gap-4 md:gap-8">
           <BrickPattern />
           <h1
-            className={`${playfair.className} text-5xl font-bold text-[#6C270E] tracking-wide`}
+            className={`${playfair.className} text-4xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center`}
           >
             Contact Us
           </h1>
@@ -106,7 +103,7 @@ export default function ContactPage() {
 
       {/* Section 1 — Map + Address */}
       <FadeIn>
-        <div className="px-16 pb-16 max-w-5xl mx-auto">
+        <div className="px-6 md:px-16 pb-16 max-w-5xl mx-auto w-full">
           <iframe
             src="https://maps.google.com/maps?q=Frognerveien+35A,+0264+Oslo,+Norway&output=embed"
             width="100%"
@@ -118,10 +115,10 @@ export default function ContactPage() {
           />
 
           <div
-            className="grid grid-cols-2 mt-0 rounded-b-xl overflow-hidden"
+            className="grid grid-cols-1 md:grid-cols-2 mt-0 rounded-b-xl overflow-hidden"
             style={{ backgroundColor: "#1a0a04" }}
           >
-            <div className="px-8 py-6 border-r border-white/10">
+            <div className="px-8 py-6 border-b md:border-b-0 md:border-r border-white/20">
               <p className="text-white font-bold text-lg mb-2">
                 De La Casa Frogner
               </p>
@@ -137,14 +134,14 @@ export default function ContactPage() {
 
       {/* Section 2 — Contact info */}
       <FadeIn>
-        <div className="flex flex-col items-center gap-8 px-16 pb-20">
+        <div className="flex flex-col items-center gap-8 px-6 md:px-16 pb-20">
           <h2
             className={`${playfair.className} text-3xl font-bold text-[#6C270E] text-center max-w-2xl`}
           >
             Do You Have Any Question Or Want To Book A Table? Contact Us!
           </h2>
 
-          <div className="flex gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
             <div
               className="flex items-center gap-4 px-8 py-5 rounded-xl"
               style={{ backgroundColor: "#E8D5B5" }}
@@ -172,21 +169,21 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <Button href="/reservation" label="Book Table" />
+          <div className="w-fit"><Button href="/reservation" label="Book Table" /></div>
         </div>
       </FadeIn>
 
       {/* Section 3 — FAQ */}
-      <section style={{ backgroundColor: "#A06811" }} className="px-16 py-20">
+      <section style={{ backgroundColor: "#A06811" }} className="px-6 md:px-16 py-14 md:py-20">
         <FadeIn>
           <h2
-            className={`${playfair.className} text-4xl font-bold text-[#DBD2C3] text-center mb-12`}
+            className={`${playfair.className} text-3xl md:text-4xl font-bold text-[#DBD2C3] text-center mb-10 md:mb-12`}
           >
             Frequently Asked Questions
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {faqs.map((faq, i) => (
             <FadeIn key={i} delay={i * 0.08}>
               <div
