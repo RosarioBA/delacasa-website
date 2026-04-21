@@ -1,17 +1,30 @@
+import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import { GiKnifeFork } from "react-icons/gi";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
 
+export const metadata: Metadata = {
+  title: "Menu | De La Casa",
+  description: "Explore our pasta bar menu and brunch options at De La Casa, Frognerveien 35A Oslo.",
+};
+
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
-function ImageGrid() {
+function ImageGrid({ wide, sq1, sq2 }: { wide: string; sq1: string; sq2: string }) {
   return (
     <div className="flex flex-col gap-3 w-full">
-      <div className="w-full aspect-video bg-gray-300 rounded-xl" />
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+        <Image src={wide} alt="" fill className="object-cover" />
+      </div>
       <div className="grid grid-cols-2 gap-3">
-        <div className="aspect-square bg-gray-300 rounded-xl" />
-        <div className="aspect-square bg-gray-300 rounded-xl" />
+        <div className="relative aspect-square rounded-xl overflow-hidden">
+          <Image src={sq1} alt="" fill className="object-cover" />
+        </div>
+        <div className="relative aspect-square rounded-xl overflow-hidden">
+          <Image src={sq2} alt="" fill className="object-cover" />
+        </div>
       </div>
     </div>
   );
@@ -22,6 +35,9 @@ const sections = [
     id: 1,
     title: "The Pasta",
     imageLeft: false,
+    wide: "/pastainstove.jpg",
+    sq1: "/pollo-mozzarella.jpg",
+    sq2: "/burmese.jpg",
     content: (
       <p className="text-[#010101] text-lg leading-relaxed">
         At "De la Casa" you can enjoy a delicious home made meal with fresh
@@ -36,6 +52,9 @@ const sections = [
     id: 2,
     title: "De La Casa Brunch",
     imageLeft: true,
+    wide: "/brunch.jpg",
+    sq1: "/coffee1.jpg",
+    sq2: "/omelet1.jpg",
     content: (
       <p className="text-[#010101] text-lg leading-relaxed">
         By popular demand we now offer a fantastic Brunch menu, full of fresh
@@ -51,6 +70,9 @@ const sections = [
     id: 3,
     title: "A Healthy Choice",
     imageLeft: false,
+    wide: "/primavera-salad2.jpg",
+    sq1: "/avocado-toast.jpg",
+    sq2: "/halloumi.jpg",
     content: (
       <p className="text-[#010101] text-lg leading-relaxed">
         Our cuisine is rich in nutritious delicacies to encourage a healthy
@@ -96,7 +118,7 @@ export default function MenuPage() {
           <div key={section.id} className="flex flex-row items-center gap-16">
             {section.imageLeft && (
               <FadeIn className="flex-1">
-                <ImageGrid />
+                <ImageGrid wide={section.wide} sq1={section.sq1} sq2={section.sq2} />
               </FadeIn>
             )}
 
@@ -117,7 +139,7 @@ export default function MenuPage() {
 
             {!section.imageLeft && (
               <FadeIn delay={0.15} className="flex-1">
-                <ImageGrid />
+                <ImageGrid wide={section.wide} sq1={section.sq1} sq2={section.sq2} />
               </FadeIn>
             )}
           </div>

@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
+
+export const metadata: Metadata = {
+  title: "Contact | De La Casa",
+  description: "Find us at Frognerveien 35A, Oslo. Call +47 92 83 32 75 or book a table online.",
+};
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
