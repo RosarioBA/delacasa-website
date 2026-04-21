@@ -2,7 +2,7 @@ import FadeIn from "@/components/FadeIn";
 
 export default function Welcome() {
   return (
-    <section className="bg-[#010101] px-8 py-20 flex flex-col items-center text-center gap-6">
+    <section className="bg-[#010101] px-6 md:px-8 py-10 md:py-20 flex flex-col items-center text-center gap-6">
       <FadeIn>
         <div className="flex items-center gap-3">
           <span className="block w-8 h-px bg-[#A06811]" />

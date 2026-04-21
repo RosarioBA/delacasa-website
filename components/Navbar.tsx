@@ -75,9 +75,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Right - Book Table + Social */}
+        {/* Right - Social */}
         <div className="flex-1 flex justify-end items-center gap-4">
-          <Button href="/reservation" label="Book Table" />
           <a
             href="https://instagram.com/delacasa_pastabar/"
             target="_blank"
@@ -152,7 +151,7 @@ export default function Navbar() {
                   )
                 )}
               </nav>
-              <div className="mt-auto">
+              <div className="w-fit">
                 <Button
                   href="/reservation"
                   label="Book Table"
