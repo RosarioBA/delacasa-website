@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
+import Image from "next/image";
 import Button from "@/components/Button";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
@@ -11,32 +12,22 @@ export const metadata: Metadata = {
 
 export default function ReservationPage() {
   return (
-    <main
-      className="min-h-screen flex items-center justify-center px-6 py-24 pt-40"
-      style={{
-        backgroundColor: "#DBD2C3",
-        backgroundImage: "url('/restaurant-interior.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        position: "relative",
-      }}
-    >
+    <main className="min-h-screen flex items-center justify-center px-16 gap-16" style={{ backgroundColor: "#DBD2C3", paddingTop: "10rem", paddingBottom: "6rem" }}>
 
-      {/* Card */}
-      <div
-        className="relative z-10 flex flex-col gap-6 max-w-lg w-full rounded-2xl px-10 py-12"
-        style={{
-          backgroundColor: "#FFEACD",
-          boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
-        }}
-      >
-        <h1
-          className={`${playfair.className} text-3xl font-bold italic text-[#6C270E]`}
-        >
-          Welcome to De La Casa
+      {/* Left — Info */}
+      <div className="flex flex-col gap-8 max-w-lg">
+        <div className="flex items-center gap-3">
+          <span className="block w-8 h-px bg-[#6C270E]" />
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#6C270E]">
+            Reservations
+          </p>
+        </div>
+
+        <h1 className={`${playfair.className} text-5xl font-bold italic text-[#6C270E]`}>
+          Welcome to<br />De La Casa
         </h1>
 
-        <p className="text-[#010101] text-sm leading-relaxed">
+        <p className="leading-relaxed">
           We would like to welcome you to our restaurant. Important information
           before you book a table with us. To reserve a table, a credit card
           must be provided as a guarantee. If you cancel less than 24 hours
@@ -45,20 +36,26 @@ export default function ReservationPage() {
           us to make an appointment.
         </p>
 
-        <a
-          href="tel:+4792833275"
-          className="text-[#6C270E] font-semibold text-sm hover:underline"
-        >
-          +47 928 33 275
-        </a>
-
-        <div>
+        <div className="flex items-center gap-6">
+          <a href="tel:+4792833275" className="text-[#6C270E] font-semibold hover:underline">
+            +47 928 33 275
+          </a>
           <Button
             href="https://booking.gastroplanner.no/delacasafrogner/t"
             label="Start booking"
             external
           />
         </div>
+      </div>
+
+      {/* Right — Image */}
+      <div className="relative rounded-2xl overflow-hidden flex-shrink-0" style={{ width: "35%", aspectRatio: "3/4" }}>
+        <Image
+          src="/lights.jpg"
+          alt="De La Casa restaurant"
+          fill
+          className="object-cover"
+        />
       </div>
     </main>
   );
