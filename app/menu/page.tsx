@@ -87,61 +87,51 @@ export default function MenuPage() {
   return (
     <main className="min-h-screen pb-20" style={{ backgroundColor: "#DBD2C3" }}>
       {/* Header */}
-      <div
-        className="flex flex-col items-center gap-4 px-8 pb-16"
-        style={{ paddingTop: "12rem" }}
-      >
-        <div className="flex items-center gap-6">
-          <GiKnifeFork className="text-[#6C270E] text-4xl -rotate-12" />
+      <div className="flex flex-col items-center gap-4 px-8 pt-40 md:pt-48 pb-12 md:pb-16">
+        <div className="flex items-center gap-4">
+          <GiKnifeFork className="text-[#6C270E] text-2xl md:text-4xl -rotate-12" />
           <h1
-            className={`${playfair.className} text-5xl font-bold text-[#6C270E] tracking-wide`}
+            className={`${playfair.className} text-3xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center`}
           >
             DE LA CASA
           </h1>
-          <GiKnifeFork className="text-[#6C270E] text-4xl rotate-12 scale-x-[-1]" />
+          <GiKnifeFork className="text-[#6C270E] text-2xl md:text-4xl rotate-12 scale-x-[-1]" />
         </div>
 
-        <div className="flex items-center gap-4">
-          <span className="block w-16 h-px bg-[#6C270E]" />
-          <p className="text-sm font-semibold tracking-widest uppercase text-[#6C270E]">
+        <div className="flex items-center justify-center gap-4 w-full">
+          <span className="block w-10 md:w-16 h-px bg-[#6C270E]" />
+          <p className="text-sm font-semibold tracking-widest uppercase text-[#6C270E] text-center">
             Pasta Bar Menus
           </p>
-          <span className="block w-16 h-px bg-[#6C270E]" />
+          <span className="block w-10 md:w-16 h-px bg-[#6C270E]" />
         </div>
 
-        <Button href="https://www.delacasapastabar.com/_files/ugd/430aec_4fe63c2d79264965a4e57cdf6a42fdcd.pdf" label="View Menu" external />
+        <div className="w-fit">
+          <Button href="https://www.delacasapastabar.com/_files/ugd/430aec_4fe63c2d79264965a4e57cdf6a42fdcd.pdf" label="View Menu" external />
+        </div>
       </div>
 
       {/* Sections */}
-      <div className="flex flex-col gap-24 px-16">
+      <div className="flex flex-col gap-16 md:gap-24 px-6 md:px-16">
         {sections.map((section) => (
-          <div key={section.id} className="flex flex-row items-center gap-16">
-            {section.imageLeft && (
-              <FadeIn className="flex-1">
-                <ImageGrid wide={section.wide} sq1={section.sq1} sq2={section.sq2} />
-              </FadeIn>
-            )}
+          <div key={section.id} className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+            {/* Image always on top on mobile; left/right on desktop */}
+            <FadeIn className={`w-full md:flex-1 ${!section.imageLeft ? "md:order-last" : ""}`}>
+              <ImageGrid wide={section.wide} sq1={section.sq1} sq2={section.sq2} />
+            </FadeIn>
 
-            <FadeIn delay={0.15} className="flex-1 flex flex-col gap-4">
+            <FadeIn delay={0.15} className="w-full md:flex-1 flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <span className="block w-8 h-px bg-[#6C270E]" />
                 <p className="text-xs font-semibold tracking-widest uppercase text-[#6C270E]">
                   Menu
                 </p>
               </div>
-              <h2
-                className={`${playfair.className} text-4xl font-bold text-[#6C270E]`}
-              >
+              <h2 className={`${playfair.className} text-4xl font-bold text-[#6C270E]`}>
                 {section.title}
               </h2>
               {section.content}
             </FadeIn>
-
-            {!section.imageLeft && (
-              <FadeIn delay={0.15} className="flex-1">
-                <ImageGrid wide={section.wide} sq1={section.sq1} sq2={section.sq2} />
-              </FadeIn>
-            )}
           </div>
         ))}
       </div>
