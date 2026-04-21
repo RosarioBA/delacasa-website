@@ -48,7 +48,7 @@ export default function Hero() {
         </div>
 
         {/* Info */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-sm text-gray-400">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-sm text-gray-200">
           <span>+47 928 33 275</span>
           <span className="hidden sm:inline text-gray-600">·</span>
           <span>Frognerveien 35A, 0266 Oslo</span>
