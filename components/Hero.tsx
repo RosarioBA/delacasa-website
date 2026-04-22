@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="flex-1 flex flex-col justify-center px-6 md:px-16 pt-40 pb-12 md:pt-36 md:pb-16 gap-6">
 
         {/* Label */}
-        <p className="text-xs font-semibold tracking-widest uppercase text-[#6C270E]">
+        <p className="text-[10px] font-semibold tracking-wider uppercase text-[#6C270E] origin-left scale-75">
           Pasta Bar · Oslo · Est. 2018
         </p>
 
@@ -23,7 +23,7 @@ export default function Hero() {
 
         {/* Subtext */}
         <p className="text-[#010101] text-base md:text-lg leading-relaxed max-w-md">
-          Hand-cut pasta, slow sauces, seasonal toppings — built to order at the counter, on your table in under eight minutes.
+          Hand-cut pasta, slow sauces, seasonal toppings. Built to order, just the way you like it.
         </p>
 
         {/* Buttons */}
