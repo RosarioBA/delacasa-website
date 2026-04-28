@@ -66,11 +66,11 @@ export default function Navbar() {
         <div className="flex-none">
           <Link href="/">
             <Image
-              src="/logo.jpg"
+              src="/DeLaCasa_black.png"
               alt="De La Casa logo"
               width={120}
               height={120}
-              className="block object-contain rounded-xl"
+              className="block object-contain"
             />
           </Link>
         </div>
