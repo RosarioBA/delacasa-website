@@ -93,7 +93,7 @@ export default function AboutPage() {
         <div className="w-full md:flex-shrink-0 md:w-[35%] order-first md:order-last">
           <FadeIn delay={0.15}>
             <div className="relative rounded-xl overflow-hidden w-full" style={{ aspectRatio: "3/4" }}>
-              <Image src="/jerome-sofi-line.png" alt="Jerome and Sofi" fill className="object-cover" />
+              <Image src="/jerome-sofi-line.jpg" alt="Jerome and Sofi" fill className="object-cover" />
             </div>
           </FadeIn>
         </div>
