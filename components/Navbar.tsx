@@ -13,7 +13,6 @@ const links = [
   { href: "/menu", label: "Menu" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/bonita", label: "Bonita Café" },
   { href: "https://givn.no/en/shop/delacasa", label: "Gift Cards", external: true },
 ];
 
@@ -66,11 +65,11 @@ export default function Navbar() {
         <div className="flex-none">
           <Link href="/">
             <Image
-              src="/logo.jpg"
+              src="/DeLaCasa_black.png"
               alt="De La Casa logo"
               width={120}
               height={120}
-              className="block object-contain rounded-xl"
+              className="block object-contain"
             />
           </Link>
         </div>
@@ -157,6 +156,12 @@ export default function Navbar() {
                   label="Book Table"
                   onClick={() => setOpen(false)}
                 />
+              </div>
+
+              {/* Bonita Café strip */}
+              <div className="mt-auto border-t border-white/10 pt-6 origin-left scale-75">
+                <p className="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Also from the Bonita family</p>
+                <p className="text-[#A06811] text-xs font-semibold tracking-wide">Bonita Café</p>
               </div>
             </motion.div>
 

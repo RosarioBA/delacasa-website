@@ -8,7 +8,6 @@ Website for [De La Casa](https://www.delacasapastabar.com), an Italian pasta bar
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4
 - **Animations:** Framer Motion
-- **CMS:** Sanity v4
 - **Icons:** React Icons
 - **Fonts:** Geist (sans/mono), Playfair Display (menu page)
 
@@ -28,8 +27,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-The Sanity Studio is available at [http://localhost:3000/studio](http://localhost:3000/studio).
-
 ## Project Structure
 
 ```
@@ -40,7 +37,6 @@ app/
   contact/page.tsx      # Contact page
   reservation/page.tsx  # Reservation page
   bonita/page.tsx       # Bonita Café page
-  studio/               # Sanity Studio (embedded)
   layout.tsx            # Root layout (Navbar + Footer)
   globals.css           # Global styles + brand color tokens
 
@@ -53,10 +49,6 @@ components/
   BonitaPromo.tsx       # Bonita Café promo split section
   Button.tsx            # Reusable button (primary/secondary variants)
   FadeIn.tsx            # Scroll-triggered fade in animation wrapper
-
-sanity/
-  schemaTypes/          # Sanity content schemas
-  lib/                  # Sanity client, image helpers
 
 public/
   logo.jpg              # De La Casa logo
