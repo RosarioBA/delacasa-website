@@ -16,31 +16,25 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "#FFEACD" }}>
 
-      {/* ── Section 1: Editorial Header ── */}
-      <FadeIn>
-        <div className="px-6 md:px-20 pt-40 md:pt-48 pb-12 max-w-5xl mx-auto">
+      {/* ── Magazine two-column spread ── */}
+      <div className="px-6 md:px-20 pt-40 md:pt-48 pb-28 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
 
-          <p className="text-xs tracking-[0.35em] uppercase mb-8" style={{ color: "#B8860B", fontVariant: "small-caps" }}>
-            Chapter 01 — The Family
-          </p>
-
-          <h1
-            className={`${playfair.className} font-bold italic`}
-            style={{ color: "#6B3410", fontSize: "clamp(48px, 6.5vw, 80px)", lineHeight: "1.05" }}
-          >
-            A Story From Home.
-          </h1>
-
-          <div className="mt-10 h-px w-24" style={{ backgroundColor: "#B8860B" }} />
-        </div>
-      </FadeIn>
-
-      {/* ── Section 2: Magazine two-column spread ── */}
-      <div className="px-6 md:px-20 pb-28 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
-
-        {/* Left column: body text */}
+        {/* Left column: header + body text */}
         <FadeIn className={`${lora.className} flex-1 flex flex-col gap-7`}
           style={{ fontSize: "1.125rem", lineHeight: "1.9", color: "#3a1a08" }}>
+
+          <div>
+            <p className="text-xs tracking-[0.35em] uppercase mb-6" style={{ color: "#B8860B", fontVariant: "small-caps" }}>
+              Chapter 01 — The Family
+            </p>
+            <h1
+              className={`${playfair.className} font-bold italic`}
+              style={{ color: "#6B3410", fontSize: "clamp(48px, 6.5vw, 80px)", lineHeight: "1.05" }}
+            >
+              A Story From Home.
+            </h1>
+            <div className="mt-8 h-px w-24" style={{ backgroundColor: "#B8860B" }} />
+          </div>
 
           <p style={{ textAlign: "justify" }}>
             <span
