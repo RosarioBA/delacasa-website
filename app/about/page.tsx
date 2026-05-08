@@ -81,12 +81,6 @@ export default function AboutPage() {
           <p className="text-[#010101] text-base md:text-lg leading-relaxed">
             Then came 2018, and with it, the boldest chapter yet. De La Casa, meaning "from home" in Spanish, was born from a simple but heartfelt idea: to create a space where people feel truly welcome, where the food is honest and delicious, and where every meal feels like it was made with love in someone's own kitchen.
           </p>
-          <p className="text-[#010101] text-base md:text-lg leading-relaxed">
-            At the heart of De La Casa is our pasta bar, a fun, interactive concept where you become the chef. Choose your favourite pasta, pick your base sauce, and select your toppings. We take it from there, preparing your perfect plate freshly in minutes. Simple, satisfying, and made just for you.
-          </p>
-          <p className="text-[#010101] text-base md:text-lg leading-relaxed">
-            Today, De La Casa is proud to be part of the Frogner neighbourhood, carrying forward the same values that have defined the Bonita family for over 20 years: quality, warmth, and a genuine love for bringing people together through great food.
-          </p>
         </FadeIn>
 
         {/* Image */}
