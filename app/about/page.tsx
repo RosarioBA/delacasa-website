@@ -14,7 +14,7 @@ const lora = Lora({ subsets: ["latin"] });
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "#FFEACD" }}>
+    <main className="min-h-screen" style={{ backgroundColor: "#DBD2C3" }}>
 
       {/* ── Magazine two-column spread ── */}
       <div className="px-6 md:px-20 pt-40 md:pt-48 pb-28 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
@@ -82,7 +82,7 @@ export default function AboutPage() {
               style={{ top: "20px", left: "20px", right: 0, bottom: 0, backgroundColor: "#6B3410" }}
             >
               <div className="absolute bottom-0 left-0 right-0 px-6 py-4">
-                <p className={`${playfair.className} italic text-sm`} style={{ color: "#FFEACD" }}>
+                <p className={`${playfair.className} italic text-sm`} style={{ color: "#DBD2C3" }}>
                   Jerome &amp; Sofi
                 </p>
                 <p className="mt-1 tracking-[0.2em] uppercase" style={{ fontSize: "0.65rem", color: "rgba(255,234,205,0.65)" }}>
