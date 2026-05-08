@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-bold text-[#A06811]">De La Casa</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Authentic Italian pasta bar in the heart of Oslo. Fresh ingredients,
-            traditional recipes, warm atmosphere.
+            Fresh pasta bar in the heart of Oslo. Quality ingredients,
+            warm atmosphere.
           </p>
         </div>
 
@@ -20,23 +20,25 @@ export default function Footer() {
           </h3>
           <ul className="flex flex-col gap-2 text-sm text-gray-400">
             <li>
-              <Link href="/menu" className="hover:text-white transition-colors">
-                Menu
-              </Link>
+              <Link href="/menu" className="hover:text-white transition-colors">Menu</Link>
             </li>
             <li>
-              <Link href="/bonita" className="hover:text-white transition-colors">
-                Bonita Café
-              </Link>
+              <Link href="/about" className="hover:text-white transition-colors">About</Link>
             </li>
             <li>
-              <a
-                href="https://givn.no/en/shop/delacasa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+            </li>
+            <li>
+              <Link href="/reservation" className="hover:text-white transition-colors">Reservation</Link>
+            </li>
+            <li>
+              <a href="https://givn.no/en/shop/delacasa" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 Gift Cards
+              </a>
+            </li>
+            <li>
+              <a href="https://receipts.bonitahandel.no/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                Find Your Receipt
               </a>
             </li>
           </ul>
@@ -61,8 +63,9 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-gray-800 pt-6 text-center text-xs text-gray-600">
-        © 2026 De La Casa. All rights reserved.
+      <div className="border-t border-gray-800 pt-6 text-center text-xs text-gray-400">
+        <p>© 2026 De La Casa. All rights reserved.</p>
+        <p className="mt-1">Bonita Handel AS — org. nr. 914 263 468</p>
       </div>
     </footer>
   );
