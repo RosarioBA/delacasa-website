@@ -190,10 +190,10 @@ export default function ContactPage() {
                 className="rounded-xl p-6 flex flex-col gap-3"
                 style={{ backgroundColor: "#8A4F2A" }}
               >
-                <p className="text-[#DBD2C3] font-bold text-base leading-snug">
+                <p className="text-white font-bold text-base leading-snug">
                   {faq.question}
                 </p>
-                <p className="text-[#DBD2C3]/80 text-sm leading-relaxed">
+                <p className="text-[#DBD2C3] text-sm leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
