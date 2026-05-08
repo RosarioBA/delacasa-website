@@ -173,7 +173,30 @@ export default function ContactPage() {
         </div>
       </FadeIn>
 
-      {/* Section 3 — FAQ */}
+      {/* Section 3 — Business Customer */}
+      <FadeIn>
+        <div className="px-6 md:px-16 py-10 max-w-5xl mx-auto">
+          <div className="border-t border-[#6C270E]/20 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex flex-col gap-1">
+              <p className="text-sm font-semibold text-[#6C270E] tracking-wide">Become a Business Customer</p>
+              <p className="text-sm text-[#010101]/70 max-w-lg leading-relaxed">
+                Pay via invoices and set up a business account — complete the form and we&apos;ll be in touch.
+              </p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc3y8Z8iY5j7MWD1ovfsfa0viYvEOIIjWpKYSrpd06CjQFcdw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold underline underline-offset-4 whitespace-nowrap"
+              style={{ color: "#6C270E" }}
+            >
+              Complete the form →
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+
+      {/* Section 4 — FAQ */}
       <section style={{ backgroundColor: "#A06811" }} className="px-6 md:px-16 py-14 md:py-20">
         <FadeIn>
           <h2
