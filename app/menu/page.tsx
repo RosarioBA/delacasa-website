@@ -16,14 +16,14 @@ function ImageGrid({ wide, sq1, sq2 }: { wide: string; sq1: string; sq2: string 
   return (
     <div className="flex flex-col gap-3 w-full">
       <div className="relative w-full aspect-video rounded-xl overflow-hidden">
-        <Image src={wide} alt="" fill className="object-cover" />
+        <Image src={wide} alt="" fill sizes="100vw" className="object-cover" />
       </div>
       <div className="grid grid-cols-2 gap-3">
         <div className="relative aspect-square rounded-xl overflow-hidden">
-          <Image src={sq1} alt="" fill className="object-cover" />
+          <Image src={sq1} alt="" fill sizes="50vw" className="object-cover" />
         </div>
         <div className="relative aspect-square rounded-xl overflow-hidden">
-          <Image src={sq2} alt="" fill className="object-cover" />
+          <Image src={sq2} alt="" fill sizes="50vw" className="object-cover" />
         </div>
       </div>
     </div>

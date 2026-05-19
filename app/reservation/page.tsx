@@ -20,6 +20,7 @@ export default function ReservationPage() {
           src="/lights.jpg"
           alt="De La Casa restaurant"
           fill
+          sizes="(max-width: 768px) 100vw, 35vw"
           className="object-cover"
         />
       </div>

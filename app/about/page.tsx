@@ -79,6 +79,7 @@ export default function AboutPage() {
               src="/dlc-inside.jpg"
               alt="Inside De La Casa pasta bar"
               fill
+              sizes="(max-width: 768px) 100vw, 42vw"
               className="object-cover"
             />
           </div>

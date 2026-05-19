@@ -47,6 +47,7 @@ export default function Hero() {
           src="/pastas.jpg"
           alt="De La Casa restaurant"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover object-bottom md:object-center"
           priority
         />

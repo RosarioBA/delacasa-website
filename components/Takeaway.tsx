@@ -13,7 +13,7 @@ export default function Takeaway() {
         {/* Image */}
         <FadeIn className="w-full md:w-1/2">
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
-            <Image src="/takeaway.jpg" alt="De La Casa takeaway" fill className="object-cover" />
+            <Image src="/takeaway.jpg" alt="De La Casa takeaway" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
           </div>
         </FadeIn>
 
