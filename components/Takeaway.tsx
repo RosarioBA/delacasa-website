@@ -39,7 +39,7 @@ export default function Takeaway() {
                 external
               />
             </div>
-            <a href="tel:+4792833275" className="text-[#6C270E] font-semibold hover:underline text-sm">
+            <a href="tel:+4792833275" className="text-[#6C270E] font-semibold hover:underline text-base">
               +47 928 33 275
             </a>
           </div>
