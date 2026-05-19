@@ -1,9 +1,6 @@
-import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function Takeaway() {
   return (
@@ -13,7 +10,7 @@ export default function Takeaway() {
         {/* Image */}
         <FadeIn className="w-full md:w-1/2">
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
-            <Image src="/takeaway.jpg" alt="De La Casa takeaway" fill className="object-cover" />
+            <Image src="/takeaway.jpg" alt="De La Casa takeaway" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
           </div>
         </FadeIn>
 
@@ -26,7 +23,7 @@ export default function Takeaway() {
             </p>
           </div>
 
-          <h2 className={`${playfair.className} text-4xl md:text-5xl font-bold italic text-[#6C270E]`}>
+          <h2 className="text-4xl md:text-5xl font-bold italic text-[#6C270E]" style={{ fontFamily: "var(--font-playfair)" }}>
             Enjoy De La Casa at Home
           </h2>
 
@@ -42,7 +39,7 @@ export default function Takeaway() {
                 external
               />
             </div>
-            <a href="tel:+4792833275" className="text-[#6C270E] font-semibold hover:underline text-sm">
+            <a href="tel:+4792833275" className="text-[#6C270E] font-semibold hover:underline text-base">
               +47 928 33 275
             </a>
           </div>

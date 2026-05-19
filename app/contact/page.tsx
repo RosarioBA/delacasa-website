@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
@@ -8,8 +7,6 @@ export const metadata: Metadata = {
   title: "Contact | De La Casa",
   description: "Find us at Frognerveien 35A, Oslo. Call +47 92 83 32 75 or book a table online.",
 };
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 function BrickPattern() {
   const layout = [
@@ -91,7 +88,8 @@ export default function ContactPage() {
         <div className="flex items-center gap-4 md:gap-8">
           <BrickPattern />
           <h1
-            className={`${playfair.className} text-4xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center`}
+            className="text-4xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center"
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
             Contact Us
           </h1>
@@ -136,7 +134,8 @@ export default function ContactPage() {
       <FadeIn>
         <div className="flex flex-col items-center gap-8 px-6 md:px-16 pb-20">
           <h2
-            className={`${playfair.className} text-3xl font-bold text-[#6C270E] text-center max-w-2xl`}
+            className="text-3xl font-bold text-[#6C270E] text-center max-w-2xl"
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
             Do You Have Any Question Or Want To Book A Table? Contact Us!
           </h2>
@@ -200,7 +199,8 @@ export default function ContactPage() {
       <section style={{ backgroundColor: "#A06811" }} className="px-6 md:px-16 py-14 md:py-20">
         <FadeIn>
           <h2
-            className={`${playfair.className} text-3xl md:text-4xl font-bold text-[#DBD2C3] text-center mb-10 md:mb-12`}
+            className="text-3xl md:text-4xl font-bold text-[#DBD2C3] text-center mb-10 md:mb-12"
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
             Frequently Asked Questions
           </h2>

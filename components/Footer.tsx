@@ -18,7 +18,7 @@ export default function Footer() {
           <h3 className="text-sm font-semibold tracking-widest uppercase text-[#A06811]">
             Quick Links
           </h3>
-          <ul className="flex flex-col gap-2 text-sm text-gray-400">
+          <ul className="flex flex-col gap-2 text-base text-gray-400">
             <li>
               <Link href="/menu" className="hover:text-white transition-colors">Menu</Link>
             </li>

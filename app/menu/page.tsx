@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
 import { GiKnifeFork } from "react-icons/gi";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
@@ -10,20 +9,19 @@ export const metadata: Metadata = {
   description: "Explore our pasta bar menu and brunch options at De La Casa, Frognerveien 35A Oslo.",
 };
 
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 function ImageGrid({ wide, sq1, sq2 }: { wide: string; sq1: string; sq2: string }) {
   return (
     <div className="flex flex-col gap-3 w-full">
       <div className="relative w-full aspect-video rounded-xl overflow-hidden">
-        <Image src={wide} alt="" fill className="object-cover" />
+        <Image src={wide} alt="" fill sizes="100vw" className="object-cover" />
       </div>
       <div className="grid grid-cols-2 gap-3">
         <div className="relative aspect-square rounded-xl overflow-hidden">
-          <Image src={sq1} alt="" fill className="object-cover" />
+          <Image src={sq1} alt="" fill sizes="50vw" className="object-cover" />
         </div>
         <div className="relative aspect-square rounded-xl overflow-hidden">
-          <Image src={sq2} alt="" fill className="object-cover" />
+          <Image src={sq2} alt="" fill sizes="50vw" className="object-cover" />
         </div>
       </div>
     </div>
@@ -91,7 +89,8 @@ export default function MenuPage() {
         <div className="flex items-center gap-4">
           <GiKnifeFork className="text-[#6C270E] text-2xl md:text-4xl -rotate-12" />
           <h1
-            className={`${playfair.className} text-3xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center`}
+            className="text-3xl md:text-5xl font-bold text-[#6C270E] tracking-wide text-center"
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
             DE LA CASA
           </h1>
@@ -127,7 +126,7 @@ export default function MenuPage() {
                   Menu
                 </p>
               </div>
-              <h2 className={`${playfair.className} text-4xl font-bold text-[#6C270E]`}>
+              <h2 className="text-4xl font-bold text-[#6C270E]" style={{ fontFamily: "var(--font-playfair)" }}>
                 {section.title}
               </h2>
               {section.content}
