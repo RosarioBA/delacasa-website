@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 export default function Takeaway() {
   return (
-    <section className="bg-[#DBD2C3] px-6 md:px-16 py-16 md:py-24">
+    <section id="takeaway" className="bg-[#DBD2C3] px-6 md:px-16 py-16 md:py-24">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
         {/* Image */}

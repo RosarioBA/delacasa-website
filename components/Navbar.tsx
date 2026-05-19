@@ -13,6 +13,7 @@ const links = [
   { href: "/menu", label: "Menu" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/#takeaway", label: "Takeaway" },
   { href: "https://givn.no/en/shop/delacasa", label: "Gift Cards", external: true },
 ];
 
