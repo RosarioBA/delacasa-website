@@ -74,7 +74,7 @@ const faqs = [
         <a href="https://receipts.bonitahandel.no/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
           receipt finder
         </a>
-        {" "}to locate your receipt. Still having trouble? Drop us an email at info@delacasa.no.
+        {" "}to locate your receipt. Still having trouble? Drop us an email at info@delacasapastabar.com.
       </>
     ),
   },
@@ -125,6 +125,7 @@ export default function ContactPage() {
             <div className="px-8 py-6">
               <p className="text-white font-bold text-lg mb-2">Opening Hours</p>
               <p className="text-gray-300 text-sm">• Monday - Sunday: 11:00 - 22:00</p>
+              <p className="text-gray-500 text-xs mt-2">Check Google Maps for updated hours on public holidays.</p>
             </div>
           </div>
         </div>
@@ -150,7 +151,7 @@ export default function ContactPage() {
                 <p className="text-xs font-semibold tracking-widest uppercase text-[#6C270E] mb-1">
                   e-post
                 </p>
-                <p className="text-[#010101] font-medium">info@delacasa.no</p>
+                <p className="text-[#010101] font-medium">info@delacasapastabar.com</p>
               </div>
             </div>
 
@@ -163,7 +164,7 @@ export default function ContactPage() {
                 <p className="text-xs font-semibold tracking-widest uppercase text-[#6C270E] mb-1">
                   telephone
                 </p>
-                <p className="text-[#010101] font-medium">+47 93 81 32 71</p>
+                <p className="text-[#010101] font-medium">+47 92 83 32 75</p>
               </div>
             </div>
           </div>

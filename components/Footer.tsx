@@ -64,7 +64,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-gray-800 pt-6 text-center text-xs text-gray-400">
-        <p>© 2026 De La Casa. All rights reserved.</p>
+        <p>© 2026 Bonita Handel AS. All rights reserved.</p>
         <p className="mt-1">Bonita Handel AS — org. nr. 914 263 468</p>
       </div>
     </footer>

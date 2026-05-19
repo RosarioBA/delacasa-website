@@ -39,7 +39,7 @@ export default function AboutPage() {
             >
               D
             </span>
-            e La Casa is the latest chapter in a story that began over 20 years ago, when the Bonita Handel family first set roots in Oslo.
+            e La Casa is the latest chapter in a story that began over 20 years ago, when the Bonita family first came to Oslo.
           </p>
 
           <p style={{ textAlign: "justify" }}>

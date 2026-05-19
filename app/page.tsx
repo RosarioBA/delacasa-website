@@ -9,7 +9,7 @@ const localBusinessSchema = {
   description: "Fresh pasta bar in Frogner, Oslo. Build your own pasta with your choice of sauce and toppings.",
   url: "https://www.delacasapastabar.com",
   telephone: "+4792833275",
-  email: "info@delacasa.no",
+  email: "info@delacasapastabar.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Frognerveien 35A",
