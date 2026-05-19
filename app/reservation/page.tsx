@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import Button from "@/components/Button";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Book a Table | De La Casa",
@@ -34,7 +31,7 @@ export default function ReservationPage() {
           </p>
         </div>
 
-        <h1 className={`${playfair.className} text-4xl md:text-5xl font-bold italic text-[#6C270E] text-center md:text-left`}>
+        <h1 className="text-4xl md:text-5xl font-bold italic text-[#6C270E] text-center md:text-left" style={{ fontFamily: "var(--font-playfair)" }}>
           Welcome to<br />De La Casa
         </h1>
 

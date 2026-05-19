@@ -1,8 +1,5 @@
-import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import Button from "@/components/Button";
-
-const playfair = Playfair_Display({ subsets: ["latin"], style: ["italic"] });
 
 export default function Hero() {
   return (
@@ -17,7 +14,7 @@ export default function Hero() {
         </p>
 
         {/* Heading */}
-        <h1 className={`${playfair.className} text-7xl md:text-8xl font-bold italic text-[#6C270E] leading-none`}>
+        <h1 className="text-7xl md:text-8xl font-bold italic text-[#6C270E] leading-none" style={{ fontFamily: "var(--font-playfair)" }}>
           Pasta,<br /><span className="text-[#A06811]">made</span><br />yours.
         </h1>
 

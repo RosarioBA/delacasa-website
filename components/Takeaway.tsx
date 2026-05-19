@@ -1,9 +1,6 @@
-import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function Takeaway() {
   return (
@@ -26,7 +23,7 @@ export default function Takeaway() {
             </p>
           </div>
 
-          <h2 className={`${playfair.className} text-4xl md:text-5xl font-bold italic text-[#6C270E]`}>
+          <h2 className="text-4xl md:text-5xl font-bold italic text-[#6C270E]" style={{ fontFamily: "var(--font-playfair)" }}>
             Enjoy De La Casa at Home
           </h2>
 

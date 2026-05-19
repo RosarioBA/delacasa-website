@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lora } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
@@ -9,8 +8,6 @@ export const metadata: Metadata = {
   description: "The story behind De La Casa pasta bar in Oslo, founded by the team behind Bonita Flowers and Bonita Café.",
 };
 
-const playfair = Playfair_Display({ subsets: ["latin"], style: ["italic"] });
-const lora = Lora({ subsets: ["latin"] });
 
 export default function AboutPage() {
   return (
@@ -19,7 +16,7 @@ export default function AboutPage() {
       {/* ── Magazine two-column spread ── */}
       <div className="px-6 md:px-20 pt-40 md:pt-48 pb-28 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
 
-        <FadeIn className={`${lora.className} flex-1 flex flex-col gap-7`}
+        <FadeIn className="flex-1 flex flex-col gap-7"
           style={{ fontSize: "1.125rem", lineHeight: "1.9", color: "#3a1a08" }}>
 
           <div>
@@ -27,8 +24,8 @@ export default function AboutPage() {
               Chapter 01 — The Family
             </p>
             <h1
-              className={`${playfair.className} font-bold`}
-              style={{ color: "#6B3410", fontSize: "clamp(48px, 6.5vw, 80px)", lineHeight: "1.05" }}
+              className="font-bold"
+              style={{ color: "#6B3410", fontSize: "clamp(48px, 6.5vw, 80px)", lineHeight: "1.05", fontFamily: "var(--font-playfair)" }}
             >
               A Story From <span style={{ color: "#A06811" }}>Home.</span>
             </h1>
@@ -37,8 +34,8 @@ export default function AboutPage() {
 
           <p style={{ textAlign: "justify" }}>
             <span
-              className={`${playfair.className} font-bold float-left mr-3`}
-              style={{ fontSize: "5.5rem", lineHeight: "0.72", color: "#6B3410" }}
+              className="font-bold float-left mr-3"
+              style={{ fontSize: "5.5rem", lineHeight: "0.72", color: "#6B3410", fontFamily: "var(--font-playfair)" }}
             >
               D
             </span>
@@ -55,8 +52,8 @@ export default function AboutPage() {
 
           {/* Pull quote */}
           <blockquote
-            className={`${playfair.className} my-2 pl-6`}
-            style={{ borderLeft: "3px solid #B8860B" }}
+            className="my-2 pl-6"
+            style={{ borderLeft: "3px solid #B8860B", fontFamily: "var(--font-playfair)" }}
           >
             <p className="italic" style={{ fontSize: "1.35rem", lineHeight: "1.7", color: "#6B3410" }}>
               &ldquo;Their Colombian roots have always been at the heart of everything they do.&rdquo;
